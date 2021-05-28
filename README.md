@@ -23,6 +23,9 @@ Simply run uninstall.sh from this repo, or from `/usr/share/imsa/printers/`
 ## License
 Licensed under the GNU GPLv3 license, see [LICENSE](LICENSE).
 
+## Source
+https://github.com/devksingh4/imsa-linux-printer-installer
+
 ## Contact
 File a GitHub issue.
 
