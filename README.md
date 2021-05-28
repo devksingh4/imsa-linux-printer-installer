@@ -8,6 +8,12 @@ This tool allows [IMSA](https://imsa.edu) students to print documents to the cam
 * lpinfo
 * smbclient
 
+## Validated Platforms
+* Ubuntu 20.04 LTS
+* Ubuntu 18.04 LTS
+
+Verified working on another platform? Open a PR with the information!
+
 ## Installation
 Simply run install.sh
 
