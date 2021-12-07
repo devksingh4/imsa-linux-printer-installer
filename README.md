@@ -1,3 +1,6 @@
+# WARNING! 
+Since the start of the 2021-2022 school year, IMSA has changed the printing method, so this installer no longer works. 
+
 # IMSA Linux Printer Installer
 
 ## Overview
