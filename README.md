@@ -6,9 +6,9 @@ This tool allows [IMSA](https://imsa.edu) students to print documents to the cam
 ## Prerequisites
 * lpadmin
 * lpinfo
-* smbclient
 
 ## Validated Platforms
+* Ubuntu 22.04 LTS
 * Ubuntu 20.04 LTS
 * Ubuntu 18.04 LTS
 
