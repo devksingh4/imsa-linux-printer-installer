@@ -12,11 +12,11 @@
 
 *% Device Info
 
-*Manufacturer: "Xerox"
-*ModelName: "Xerox WorkCentre 7830"
-*ShortNickName: "Xerox WorkCentre 7830"
-*NickName: "Xerox WorkCentre 7830"
-*PCFileName: "Xerox WorkCentre 7830.ppd"
+*Manufacturer: "PaperCut"
+*ModelName: "PaperCut MF"
+*ShortNickName: "PaperCut MF Printer"
+*NickName: "PaperCut MF Printer"
+*PCFileName: "xrx7830.ppd"
 *Product: "(Xerox WorkCentre 7830)"
 *Product: "(1.3.6.1.4.1.253.8.62.1.20.6.24.1.1)"
 *XRXHasPS: True

@@ -1,9 +1,5 @@
 # IMSA Linux Printer Installer
 
-**Warning**
-
-With the introduction of the new PaperCut printing system, this method may no longer work. 
-
 ## Overview
 This tool allows [IMSA](https://imsa.edu) students to print documents to the campus printers from their Linux devices while connected to `airimsa`. While this script has only been tested on Ubuntu 18.04 and 20.04 LTS, it will likely function on most Linux distributions provided that the prerequisites are met.
 

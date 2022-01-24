@@ -25,7 +25,7 @@ uninstall_color() {
 clear
 echo "Welcome to the IMSA Linux Printer Installer - Uninstallation"
 cat << EOF
-IMSA Linux Printer Installer Copyright (C) 2020-2021 Dev Singh
+IMSA Linux Printer Installer Copyright (C) 2020-2022 Dev Singh
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions; read '/usr/share/imsa/printer/LICENSE' for details.

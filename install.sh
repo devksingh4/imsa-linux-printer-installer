@@ -15,23 +15,23 @@ install_bw() {
   echo "Installing IMSAStudentBW..."
   /usr/sbin/lpadmin \
     -p 'IMSAStudentBW' \
-    -v 'smb://print.imsa.edu/imsastudentbw' \
+    -v 'ipps://print.imsa.edu:9164/printers/imsastudentbw' \
     -m 'xrx7830.ppd' \
     -L 'Illinois Mathematics and Science Academy' \
     -o 'Color=Mono' \
-    -o 'sides=one-sided' \
     -o 'auth-info-required=negotiate' \
+    -o 'printer-error-policy=retry-job' \
     -E  > /dev/null 2>&1
 }
 install_color() {
   echo "Installing IMSAStudentColor..."
   /usr/sbin/lpadmin \
     -p 'IMSAStudentColor' \
-    -v 'smb://print.imsa.edu/imsastudentcolor' \
+    -v 'ipps://print.imsa.edu:9164/printers/imsastudentcolor' \
     -m 'xrx7830.ppd' \
     -L 'Illinois Mathematics and Science Academy' \
     -o 'auth-info-required=negotiate' \
-    -o 'sides=one-sided' \
+    -o 'printer-error-policy=retry-job' \
     -E  > /dev/null 2>&1
 }
 copy_uninstaller() {
@@ -49,7 +49,7 @@ copy_license() {
 clear
 echo "Welcome to the IMSA Linux Printer Installer"
 cat << EOF
-IMSA Linux Printer Installer Copyright (C) 2020-2021 Dev Singh
+IMSA Linux Printer Installer Copyright (C) 2020-2022 Dev Singh
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions; read '/usr/share/imsa/printer/LICENSE' for details.
@@ -62,10 +62,6 @@ if ! [ -x "$(command -v lpadmin)" ]; then
 fi
 if ! [ -x "$(command -v lpstat)" ]; then
   echo 'Error: lpadmin is not present. On Ubuntu-based systems, install the lprng package.' >&2
-  exit 1
-fi
-if ! [ -x "$(command -v smbclient)" ]; then
-  echo 'Error: smbclient is not present. On Ubuntu-based systems, install the smbclient package.' >&2
   exit 1
 fi
 
