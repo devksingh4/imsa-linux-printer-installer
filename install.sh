@@ -16,7 +16,7 @@ install_bw() {
   /usr/sbin/lpadmin \
     -p 'IMSAStudentBW' \
     -v 'ipps://print.imsa.edu:9164/printers/imsastudentbw' \
-    -m 'xrx7830.ppd' \
+    -m 'x2PULL.ppd' \
     -L 'Illinois Mathematics and Science Academy' \
     -o 'Color=Mono' \
     -o 'auth-info-required=negotiate' \
@@ -28,7 +28,7 @@ install_color() {
   /usr/sbin/lpadmin \
     -p 'IMSAStudentColor' \
     -v 'ipps://print.imsa.edu:9164/printers/imsastudentcolor' \
-    -m 'xrx7830.ppd' \
+    -m 'x2PULL.ppd' \
     -L 'Illinois Mathematics and Science Academy' \
     -o 'auth-info-required=negotiate' \
     -o 'printer-error-policy=retry-job' \
@@ -52,7 +52,7 @@ cat << EOF
 IMSA Linux Printer Installer Copyright (C) 2020-2022 Dev Singh
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
-under certain conditions; read '/usr/share/imsa/printer/LICENSE' for details.
+under certain conditions; read '/usr/share/imsa/printers/LICENSE' for details.
 EOF
 
 # Check if lpadmin lpstat and smbclient are installed
@@ -66,10 +66,10 @@ if ! [ -x "$(command -v lpstat)" ]; then
 fi
 
 # Check to see if the drivers are installed
-if [ ! -e /usr/share/cups/model/xrx7830.ppd ]
+if [ ! -e /usr/share/cups/model/x2PULL.ppd ]
 then
     sudo mkdir -p /usr/share/cups/model
-    sudo cp xrx7830.ppd /usr/share/cups/model
+    sudo cp x2PULL.ppd /usr/share/cups/model
     sudo systemctl restart cups
 fi
 

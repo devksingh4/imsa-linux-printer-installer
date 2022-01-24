@@ -28,7 +28,7 @@ cat << EOF
 IMSA Linux Printer Installer Copyright (C) 2020-2022 Dev Singh
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
-under certain conditions; read '/usr/share/imsa/printer/LICENSE' for details.
+under certain conditions; read '/usr/share/imsa/printers/LICENSE' for details.
 EOF
 
 # Check if lpadmin lpstat and smbclient are installed
@@ -38,9 +38,9 @@ if ! [ -x "$(command -v lpadmin)" ]; then
 fi
 
 # Check to see if the drivers are installed
-if [ -e /usr/share/cups/model/xrx7830.ppd ]
+if [ -e /usr/share/cups/model/x2PULL.ppd ]
 then
-    sudo rm /usr/share/cups/model/xrx7830.ppd
+    sudo rm /usr/share/cups/model/x2PULL.ppd
     sudo systemctl restart cups
 fi
 
